@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор Рекламних Проєктів</title>
+    
+    <link rel="stylesheet" href="styles.css"> 
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/list.js@2.3.1/dist/list.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+    <h1>Панель Моніторингу Рекламних Проєктів</h1>
+    <button onclick="addProject()">➕ Додати Проєкт</button>
+    <button onclick="saveProjects()">💾 Зберегти Дані</button>
+    <hr>
+
+    <div class="dashboard">
+        <div class="analytics-block">
+            <h2> Аналітика (Lodash)</h2>
+            <p><strong>Загальний Прибуток:</strong> <span id="total-profit">0.00</span> грн</p>
+            <p><strong>Середній ROI:</strong> <span id="average-roi">0.00</span> %</p>
+        </div>
+
+        <div style="width: 50%;">
+            <h2> Візуалізація (Chart.js)</h2>
+            <canvas id="profitChart"></canvas>
+        </div>
+    </div>
+
+    <h2> Каталог Проєктів</h2>
+    <div id="projectTable">
+        <input class="search" placeholder="Швидкий пошук за назвою або типом" style="padding: 5px; margin-bottom: 10px; width: 300px;">
+        <table class="list-table" border="1" width="100%">
+            <thead>
+                <tr>
+                    <th class="sort" data-sort="name">Назва Проєкту</th>
+                    <th class="sort" data-sort="type">Тип</th>
+                    <th class="sort" data-sort="cost">Вартість</th>
+                    <th class="sort" data-sort="revenue">Дохід</th>
+                    <th class="sort" data-sort="profit">Прибуток/Збиток</th>
+                    <th class="sort" data-sort="roi">ROI (%)</th>
+                    <th>Дія</th>
+                </tr>
+            </thead>
+            <tbody class="list">
+                </tbody>
+        </table>
+    </div>
+
+    <script src="app.js"></script> 
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Основні стилі */
+:root {
+    --teal-light: #66CCCC; /* Світлий бірюзовий для фону */
+    --teal-dark: #008080;  /* Темний бірюзовий для акцентів */
+    --gray-bg: #F8F8F8;    /* Світлий сірий фон */
+    --text-color: #333333; /* Основний колір тексту */
+    --accent-shadow: rgba(0, 128, 128, 0.2);
+}
+
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    padding: 40px; 
+    background-color: var(--gray-bg);
+    color: var(--text-color);
+}
+h1 {
+    color: var(--teal-dark);
+    border-bottom: 2px solid var(--teal-light);
+    padding-bottom: 10px;
+}
+h2 {
+    color: var(--teal-dark);
+}
+
+/* Стилі кнопок */
+button {
+    background-color: var(--teal-dark);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px var(--accent-shadow);
+}
+button:hover {
+    background-color: #006666; /* Трохи темніший бірюзовий */
+    transform: translateY(-1px);
+}
+
+/* Dashboard та Аналітика */
+.dashboard { 
+    display: flex; 
+    gap: 30px; 
+    margin-bottom: 30px; 
+    flex-wrap: wrap; 
+}
+.analytics-block { 
+    flex-basis: 350px; 
+    border: 1px solid var(--teal-light); 
+    padding: 20px; 
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px var(--accent-shadow);
+}
+
+/* Таблиця */
+#projectTable {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.list-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.list-table th, .list-table td {
+    border: 1px solid #E0E0E0;
+    padding: 12px;
+    text-align: left;
+}
+.list-table th {
+    background-color: var(--teal-light);
+    color: var(--teal-dark);
+    font-weight: bold;
+    cursor: pointer;
+}
+.list-table tr:nth-child(even) {
+    background-color: #F9FFFF; /* Дуже світлий бірюзовий для чергування рядків */
+}
+.list-table tr:hover {
+    background-color: #E6F5F5;
+}
+
+/* Спеціальні класи для відображення прибутку */
+.profit-positive { color: #28a745; font-weight: bold; } /* Зелений для прибутку */
+.profit-negative { color: #dc3545; font-weight: bold; } /* Червоний для збитку */
+
+/* Поле пошуку */
+input.search {
+    padding: 10px;
+    border: 1px solid var(--teal-light);
+    border-radius: 5px;
+    width: 300px;
+    margin-bottom: 15px;
+}
