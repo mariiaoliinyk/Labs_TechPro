@@ -1,0 +1,103 @@
+/* Загальний стиль */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    padding: 25px;
+    background-color: #e0f7f7; /* Дуже світлий teal */
+    color: #004d4d;
+}
+
+/* Контейнер */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    max-width: 750px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* Заголовок */
+h2 {
+    color: #006d6d;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Поля форми */
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+input[type="number"] {
+    padding: 8px;
+    border: 2px solid #66b2b2;
+    border-radius: 6px;
+    width: 80px;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #008c8c;
+}
+
+/* Кнопки */
+button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: rgb(0, 110, 97);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Створити таблицю */
+#buildButton {
+    background-color: #009999;
+}
+
+#buildButton:hover {
+    background-color: #007d7d;
+}
+
+/* Підсвітити */
+#highlightButton {
+    background-color: #00b3b3;
+}
+
+#highlightButton:hover {
+    background-color: #009090;
+}
+
+/* Таблиця */
+table {
+    margin-top: 25px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #b2d8d8;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+/* Підсвічення максимального */
+.highlight-max {
+    background-color: #ffd86b !important;
+    font-weight: bold;
+}
+
+/* Середнє значення */
+#averageValue {
+    margin-top: 18px;
+    font-size: 1.2em;
+    color: #008060;
+    font-weight: bold;
+    text-align: center;
+}

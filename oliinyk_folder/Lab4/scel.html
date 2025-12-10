@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна 14: Динамічна Таблиця</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Генератор Таблиць</h1>
+
+    <form id="tableGeneratorForm">
+        <label for="rowsN">Кількість рядків (N):</label>
+        <input type="number" id="rowsN" min="1" value="5" required>
+        
+        <label for="colsM">Кількість стовпців (M):</label>
+        <input type="number" id="colsM" min="1" value="5" required>
+        
+        <button type="submit">Створити Таблицю</button>
+    </form>
+
+    <div id="tableContainer">
+        </div>
+
+    <div id="results">
+        <p id="averageValue"></p>
+    </div>
+
+    <script src="task1.js"></script>
+</body>
+</html>
